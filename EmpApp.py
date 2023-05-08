@@ -99,7 +99,7 @@ def GetEmp():
             print(result)
         
         emp_image_file_name_in_s3 = "emp-id-" + str(emp_id) + ".jpg"
-        s3_image_url = "https://cjy-employee.s3.amazonaws.com/"+emp_image_file_name_in_s3
+        s3_image_url = "https://wyelum-employee.s3.amazonaws.com/"+emp_image_file_name_in_s3
 
     except Exception as e:
         return str(e)
