@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+            color: white;
+        }
+
+        body {
+            height: 180vh;
+            width: 100%;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 13%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar a {
+            position: relative;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 30px;
+            text-decoration: none;
+        }
+
+        .background {
+            background: url(background3.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 180vh;
+            width: 100%;
+            filter: blur(10px);
+        }
+
+        .form-container {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+            height: px;
+            margin-top: 20px;
+            background: url(background3.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .form-bubble {
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-bubble-container {
+            margin-bottom: 2rem;
+        }
+
+        .form-bubble-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-bubble-container input {
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .custom-file-input {
+            cursor: pointer;
+        }
+
+        .form-button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 1rem 2px;
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        h3 {
+            font-size: 25px;
+            text-align: center;
+            font-style: bold;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        input{
+            color: black;
+        }
+    </style>
+
+<head>
+    <title>Employee Retrieve Output</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/addemp">Add</a>
+              <a href="/deleteemp">Delete</a>
+              <a href="/getemp">Retrieve</a>
+        </nav>
+        </header>
+
+        <div class="background"></div>
+
+    <h2 class="title2">Employee Information</h2>
+
+    <div class="form-container form-container-get-output">
+        <div class="form-bubble">
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>Employee ID</p>
+                <p>{{ result[0] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>First Name</p>
+                <p>{{ result[1] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>Last Name</p>
+                <p>{{ result[2] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>Primary Skill</p>
+                <p>{{ result[3] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>location</p>
+                <p>{{ result[4] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>Hire Date</p>
+                <p>{{ result[5] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>Payroll</p>
+                <p>{{ result[6] }}</p>
+            </div>
+            <div class="form-bubble-container form-bubble-container-get">
+                <p>Attendance</p>
+                <p>{{ result[7] }}</p>
+            </div>
+            <a href="/getemp" style="text-decoration: none;">
+                <button type="submit" class="form-button1">GO BACK</button>
+            </a>
+            <br>
+            <img src="{{ image }}" alt="Employee Image" style="display: block;margin-left: auto;margin-right: auto;border:2px solid black;" width="20%" height="20%">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

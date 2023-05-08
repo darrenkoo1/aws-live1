@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+            color: white;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 13%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar a {
+            position: relative;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 30px;
+            text-decoration: none;
+        }
+
+        .background {
+            background: url(background3.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            filter: blur(10px);
+        }
+
+        .form-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 40%;
+        height: 600px;
+        margin-top: 20px;
+        background: url(background3.jpg) no-repeat;
+        background-position: center;
+        background-size:cover ;
+        border-radius: 20px;
+        overflow: hidden;
+        
+
+        }
+
+        .form-bubble {
+
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-bubble-container {
+            margin-bottom: 2rem;
+        }
+
+        .form-bubble-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-bubble-container input {
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .custom-file-input {
+            cursor: pointer;
+        }
+
+        .form-button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 1rem 2px;
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        h2{
+            text-align: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        input{
+            color: black;
+        }
+    </style>
+<head>
+    <title>Employee Add</title>
+</head>
+
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/addemp">Add</a>
+          <a href="/deleteemp">Delete</a>
+          <a href="/getemp">Retrieve</a>
+    </nav>
+    </header>
+
+    <div class="background"></div>
+
+    <div class="form-container">
+        <h2>Add Employee</h2>
+        <form action="/addemp/output" autocomplete="on" method="POST" enctype="multipart/form-data" class="form-bubble">
+            <div class="" form-bubble-container>
+                <label for="emp_id">Employee ID</label>
+                <input type=number name="emp_id" autofocus placeholder="Employee ID">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="emp_id">First Name</label>
+                <input type=text name="first_name" autofocus placeholder="First Name">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="last_name">Last Name</label>
+                <input type=text name="last_name" autofocus placeholder="Last Name">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="pri_skill">Primary Skill</label>
+                <input type=text name="pri_skill" autofocus placeholder="Primary Skill">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="location">Location</label>
+                <input type=text name="location" autofocus placeholder="Location">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="hire_date">Hire date</label>
+                <input type=date name="hire_date" autofocus placeholder="Hire date">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="payroll">Payroll</label>
+                <input type=text name="payroll" autofocus placeholder="Payroll">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="attendance">Attendance</label>
+                <input type=text name="attendance" autofocus placeholder="Attendance">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="emp_image_file">Image</label>
+                <input type=file name="emp_image_file" class="custom-file-input" autofocus multiple="multiple">
+            </div>
+            <br>
+            <button type="submit" class="form-button1"> ADD EMPLOYEE</button>
+        </form>
+    </div>
+</body>
+
+</html>
