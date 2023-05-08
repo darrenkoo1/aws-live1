@@ -1,0 +1,24 @@
+HeidiSQL login
+Hostname/IP : employee.crm7qupyokkn.us-east-1.rds.amazonaws.com
+User:aws_user
+password:Bait3273
+
+config:
+customhost = "employee.crm7qupyokkn.us-east-1.rds.amazonaws.com"
+customuser = "aws_user"
+custompass = "Bait3273"
+customdb = "employee"
+custombucket = "-employee"
+customregion = "us-east-1"
+
+
+run command
+
+sudo yum install git
+git clone https://github.com/
+cd aws-live
+sudo yum install python3
+sudo pip3 install flask
+sudo pip3 install pymysql
+sudo pip3 install boto3
+sudo python3 EmpApp.py
