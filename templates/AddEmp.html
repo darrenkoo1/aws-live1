@@ -1,148 +1,183 @@
 <!DOCTYPE html>
 <html>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'poppins', sans-serif;
-    }
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+            color: white;
+        }
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        width: 100%;
-        background: url('https://raw.githubusercontent.com/darrenkoo1/aws-live1/main/templates/background6.jpg') no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-    
-    .navi {
+        body {
+            height: 100vh;
+            width: 100%;;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 13%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .navbar a {
+            position: relative;
+            font-size: 16px;
+            color: #fff;
+            margin-right: 30px;
+            text-decoration: none;
+        }
+
+        .background {
+            background: url(background3.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            filter: blur(10px);
+        }
+
+        .form-container {
         position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        list-style: none;
-        margin: 20px;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.7);
-        border-radius: 5px;
-    }
-    
-    .navi2 a {
-        text-decoration: none;
-        color: #fff;
-        margin-right: 20px;
-        font-size: 18px;
-    }
-    
-    h2.title2 {
-        position: absolute;
+        left: 50%;
         top: 50%;
-        transform: translateY(-130%);
-        color: #fff;
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 2em;
-    }
-    
-    .form-container {
-        position: relative;
-        width: 400px;
-        background: transparent;
-        border: 2px solid rgba(255, 255, 255, 0.5);
+        transform: translate(-50%,-50%);
+        width: 40%;
+        height: 600px;
+        margin-top: 20px;
+        background: url(background3.jpg) no-repeat;
+        background-position: center;
+        background-size:cover ;
         border-radius: 20px;
-        backdrop-filter: blur(15px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px;
-    }
-    
-    .form-bubble-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 10px 0;
-    }
-    
-    label {
-        color: #fff;
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-    
-    input {
-        width: 100%;
-        padding: 8px;
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        outline: none;
-        color: #fff;
-        font-size: 14px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
-    
-    .form-button1 {
-        width: 100%;
-        height: 40px;
-        border-radius: 40px;
-        background: #fff;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        font-size: 1em;
-        font-weight: 600;
-        text-align: center;
-    }
-</style>
+        overflow: hidden;
+        
 
+        }
+
+        .form-bubble {
+
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-bubble-container {
+            margin-bottom: 2rem;
+        }
+
+        .form-bubble-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-bubble-container input {
+            padding: 0.5rem;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .custom-file-input {
+            cursor: pointer;
+        }
+
+        .form-button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 1rem 2px;
+            cursor: pointer;
+            border-radius: 1rem;
+        }
+
+        h2{
+            text-align: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        input{
+            color: black;
+        }
+    </style>
 <head>
     <title>Employee Add</title>
 </head>
 
-<body class="bckimg">
-    <ul class="navi">
-        <li class="navi2"><a href="/">Home</a></li>
-        <li class="navi2"><a href="/addemp">Add</a></li>
-        <li class="navi2"><a href="/deleteemp">Delete</a></li>
-        <li class="navi2"><a href="/getemp">Retrieve</a></li>
-    </ul>
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="/addemp">Add</a>
+          <a href="/deleteemp">Delete</a>
+          <a href="/getemp">Retrieve</a>
+    </nav>
+    </header>
 
-
-    <h2 class="title2">Add Employee</h2>
+    <div class="background"></div>
 
     <div class="form-container">
+        <h2>Add Employee</h2>
         <form action="/addemp/output" autocomplete="on" method="POST" enctype="multipart/form-data" class="form-bubble">
             <div class="" form-bubble-container>
                 <label for="emp_id">Employee ID</label>
                 <input type=number name="emp_id" autofocus placeholder="Employee ID">
             </div>
+            <br>
             <div class="" form-bubble-container>
                 <label for="emp_id">First Name</label>
                 <input type=text name="first_name" autofocus placeholder="First Name">
             </div>
+            <br>
             <div class="" form-bubble-container>
                 <label for="last_name">Last Name</label>
                 <input type=text name="last_name" autofocus placeholder="Last Name">
             </div>
+            <br>
             <div class="" form-bubble-container>
                 <label for="pri_skill">Primary Skill</label>
                 <input type=text name="pri_skill" autofocus placeholder="Primary Skill">
             </div>
+            <br>
             <div class="" form-bubble-container>
                 <label for="location">Location</label>
                 <input type=text name="location" autofocus placeholder="Location">
             </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="hire_date">Hire date</label>
+                <input type=date name="hire_date" autofocus placeholder="Hire date">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="payroll">Payroll</label>
+                <input type=text name="payroll" autofocus placeholder="Payroll">
+            </div>
+            <br>
+            <div class="" form-bubble-container>
+                <label for="attendance">Attendance</label>
+                <input type=text name="attendance" autofocus placeholder="Attendance">
+            </div>
+            <br>
             <div class="" form-bubble-container>
                 <label for="emp_image_file">Image</label>
                 <input type=file name="emp_image_file" class="custom-file-input" autofocus multiple="multiple">
             </div>
+            <br>
             <button type="submit" class="form-button1"> ADD EMPLOYEE</button>
         </form>
     </div>

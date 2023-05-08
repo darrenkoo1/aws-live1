@@ -23,7 +23,7 @@ table = 'employee'
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template('home.html')
 
 @app.route("/addemp", methods=['GET', 'POST'])
 def addEmp():
@@ -37,9 +37,12 @@ def AddEmp():
     last_name = request.form['last_name']
     pri_skill = request.form['pri_skill']
     location = request.form['location']
+    hire_date = request.form['hire_date']
+    payroll = request.form['payroll']
+    attendance = request.form['attendance']
     emp_image_file = request.files['emp_image_file']
-
-    insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
+    
+    insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
 
     if emp_image_file.filename == "":
@@ -47,7 +50,7 @@ def AddEmp():
 
     try:
 
-        cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location))
+        cursor.execute(insert_sql, (emp_id, first_name, last_name, pri_skill, location,hore_date,payroll,attendance))
         db_conn.commit()
         emp_name = "" + first_name + " " + last_name
         # Uplaod image file in S3 #
