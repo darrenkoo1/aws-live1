@@ -1,6 +1,6 @@
 sudo yum install git
 https://github.com/darrenkoo1/aws-live1.git
-cd aws-live
+cd aws-live1
 sudo yum install python3
 sudo pip3 install flask
 sudo pip3 install pymysql
